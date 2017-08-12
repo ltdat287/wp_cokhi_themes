@@ -1,4 +1,35 @@
 <?php
+// Register Custom Navigation Walker
+require_once( 'wp-bootstrap-navwalker.php' );
+
+/**
+ * Create HTML list of nav menu items.
+ * Replacement for the native Walker, using the description.
+ *
+ * @see    https://wordpress.stackexchange.com/q/14037/
+ * @author toscho, http://toscho.de
+ */
+class Main_Menu_Walker extends WP_Bootstrap_Navwalker {
+	/**
+	 * Start the element output.
+	 *
+	 * @param  string $output Passed by reference. Used to append additional content.
+	 * @param  object $item Menu item data object.
+	 * @param  int $depth Depth of menu item. May be used for padding.
+	 * @param  array|object $args Additional strings. Actually always an
+	 * instance of stdClass. But this is WordPress.
+	 *
+	 * @return void
+	 */
+	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		if ( empty( $output ) ) {
+			$output .= '<li class="home-mobile"><a class="" href="http://cokhithudo.vn/"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
+		}
+
+		parent::start_el( $output, $item, $depth, $args );
+	}
+}
+
 if ( ! function_exists( 'dlt_themes_setup' ) ) :
 	function dlt_themes_setup() {
 
