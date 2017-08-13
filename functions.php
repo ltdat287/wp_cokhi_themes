@@ -81,4 +81,70 @@ function dlt_themes_js_setup() {
 }
 
 add_action( 'wp_enqueue_scripts', 'dlt_themes_js_setup' );
+
+function lst_products( $atts ) {
+	$args = shortcode_atts( array(
+		'limit'    => 10,
+		'taxonomy' => 'post_group',
+		'field'    => 'popular-articles'
+	), $atts );
+
+	extract( $args );
+
+	$posts = get_posts( [
+		'posts_per_page' => $limit,
+		'tax_query'      => [
+			'taxonomy' => $taxonomy,
+			'field'    => $field
+		]
+	] );
+
+	var_dump($posts); die;
+}
+
+/**
+ * @return string
+ */
+function lst_posts( $atts ) {
+	$args = shortcode_atts( array(
+		'limit'    => 10,
+		'taxonomy' => 'post_group',
+		'field'    => 'popular-articles'
+	), $atts );
+	extract( $args );
+
+	$posts = get_posts( [
+		'posts_per_page' => $limit,
+		'tax_query'      => [
+			'taxonomy' => $taxonomy,
+			'field'    => $field
+		]
+	] );
+
+	$content = '';
+
+	foreach ( $posts as $post ) {
+		$content .= '<p><i class="fa fa-long-arrow-right" aria-hidden="true" style=" color: #41ade5; "></i><a href="' . get_permalink( $post->ID ) . '">' . $post->post_title . '</a> - <i>' . get_the_date( 'd/m/Y' ) . '</i></p>';
+	}
+
+	return $content;
+}
+
+add_shortcode( 'lst_posts', 'lst_posts' );
+
+/*
+ * Set post views count using post meta
+ */
+function lst_set_post_views( $postID ) {
+	$countKey = 'post_views_count';
+	$count    = get_post_meta( $postID, $countKey, true );
+	if ( $count == '' ) {
+		$count = 0;
+		delete_post_meta( $postID, $countKey );
+		add_post_meta( $postID, $countKey, '0' );
+	} else {
+		$count ++;
+		update_post_meta( $postID, $countKey, $count );
+	}
+}
 ?>
