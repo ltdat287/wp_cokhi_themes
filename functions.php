@@ -99,7 +99,8 @@ function lst_products( $atts ) {
 		]
 	] );
 
-	var_dump($posts); die;
+	var_dump( $posts );
+	die;
 }
 
 /**
@@ -147,4 +148,67 @@ function lst_set_post_views( $postID ) {
 		update_post_meta( $postID, $countKey, $count );
 	}
 }
+
+function lst_pagination() {
+
+	global $wp_query;
+
+	$big = 999999999; // need an unlikely integer
+
+	$pages = paginate_links( array(
+		'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'format'    => '?paged=%#%',
+		'current'   => max( 1, get_query_var( 'paged' ) ),
+		'total'     => $wp_query->max_num_pages,
+		'type'      => 'array',
+		'prev_text' => __( 'Previous', 'lst-blog' ),
+		'next_text' => __( 'Next', 'lst-blog' ),
+		'show_all'  => true,
+	) );
+	if ( is_array( $pages ) ) {
+		$paged = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
+		echo '<div class="paging pull-right">';
+
+		if ( empty( get_previous_posts_link() ) ) {
+			echo '<a href="javascript:void(0)" class="unactive">' . __( 'Previous', 'lst-blog' ) . '</a>';
+		}
+
+		foreach ( $pages as $page ) {
+			if ( preg_match( '/^<span/', $page ) ) {
+				echo '<a href="javascript:void(0)" class="active">' . $paged . '</a>';
+			} else {
+				echo $page;
+			}
+		}
+
+		if ( empty( get_next_posts_link() ) ) {
+			echo '<a href="javascript:void(0)" class="unactive">' . __( 'Next', 'lst-blog' ) . '</a>';
+		}
+
+		echo '</div>';
+	}
+}
+
+/**
+ * @param $post
+ * @param int $num_words
+ * @param string $more
+ */
+function lst_the_short_excerpt( $post, $num_words = 10, $more = '' ) {
+	$trimexcerpt  = apply_filters( 'get_the_excerpt', $post->post_excerpt, $post );
+	$shortexcerpt = wp_trim_words( $trimexcerpt, $num_words, $more );
+
+	echo $shortexcerpt;
+}
+
+/**
+ * Add new image size for listing blog
+ */
+add_image_size( 'image-blog-277-151', 277, 151, true );
+
+/**
+ * Add new image size for listing product
+ */
+add_image_size( 'image-product-326-245', 326, 245, true );
+
 ?>
