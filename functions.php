@@ -84,23 +84,35 @@ add_action( 'wp_enqueue_scripts', 'dlt_themes_js_setup' );
 
 function lst_products( $atts ) {
 	$args = shortcode_atts( array(
-		'limit'    => 10,
-		'taxonomy' => 'post_group',
-		'field'    => 'popular-articles'
+		'limit'     => 10,
+		'taxonomy'  => 'danh-muc-san-pham',
+		'field'     => 'id',
+		'post_type' => 'san-pham',
+		'operator'  => 'IN'
 	), $atts );
 
 	extract( $args );
 
 	$posts = get_posts( [
+		'post_type'      => $post_type,
 		'posts_per_page' => $limit,
 		'tax_query'      => [
 			'taxonomy' => $taxonomy,
-			'field'    => $field
+			'field'    => $field,
+			'terms'    => $terms,
+			'operator' => $operator
 		]
 	] );
 
-	var_dump( $posts );
-	die;
+
+	$content = '';
+
+	foreach ( $posts as $post ) {
+		$img_src = ( get_the_post_thumbnail_url( $post, array( 326, 245 ) ) ) ? get_the_post_thumbnail_url( $post, array( 326, 245 ) ) : 'http://placehold.it/326x245';
+		$content .= '<div class="col-6 col-sm-4 col-lg-4 padding-10"><a href="'. get_permalink( $post->ID ) .'"><img src="'. $img_src .'" alt="' . $post->post_title . '"></a><p><a href="'. get_permalink( $post->ID ) .'">' . $post->post_title . '</a></p></div>';
+	}
+
+	return $content;
 }
 
 /**
