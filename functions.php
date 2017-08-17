@@ -219,6 +219,11 @@ function lst_the_short_excerpt( $post, $num_words = 10, $more = '' ) {
 add_image_size( 'image-blog-277-151', 277, 151, true );
 
 /**
+ * Add new image size small for listing blog
+ */
+add_image_size( 'image-blog-126-84', 126, 84, true );
+
+/**
  * Add new image size for listing product
  */
 add_image_size( 'image-product-326-245', 326, 245, true );
