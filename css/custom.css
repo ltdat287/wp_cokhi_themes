@@ -154,7 +154,7 @@ a:hover {
 
 /*Menu*/
 .menu {
-    background: #1a80b6;
+    background: #e6e2d5;
     position: relative;
 }
 
@@ -169,7 +169,7 @@ a:hover {
 }
 
 .menu ul li a {
-    color: rgb(255, 255, 255);
+    color: #000000;
     width: 100%;
     display: inline-block;
     text-transform: uppercase;
@@ -459,7 +459,7 @@ a:hover {
 }
 
 .menumain {
-    background: #1a80b6;
+    background: #e6e2d5;
     border-bottom: 2px solid #f58634;
     margin: 0px;
 }
@@ -676,7 +676,7 @@ a:hover {
 
 #search-btn {
     cursor: pointer;
-    color: #fff;
+    color: #f58634;
 }
 
 .td-head-form-search-wrap {

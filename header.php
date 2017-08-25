@@ -12,7 +12,7 @@
 	<meta name="robots" content="index,follow">
 	<meta property="og:title" content="">
 	<meta property="og:description" content="">
-	<meta property="og:url" content="http://cokhithudo.vn/">
+	<meta property="og:url" content="<?php bloginfo('url'); ?>">
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="">
 	<meta property="og:image:type" content="image/png/jpg/gif">
@@ -23,9 +23,9 @@
 	<meta name="rating" content="general">
 	<!--    <meta property="fb:app_id" content="--><!--"/>-->
 	<!--    <meta property="fb:admins" content="--><!--"/>-->
-	<link rel="canonical" href="http://cokhithudo.vn/">
+	<link rel="canonical" href="<?php bloginfo('url'); ?>">
 
-	<base href="http://cokhithudo.vn/">
+	<base href="<?php bloginfo('url'); ?>">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
 	<script async="" src="https://embed.tawk.to/596ef3331dc79b329518f130/default" charset="UTF-8"
@@ -488,7 +488,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body data-base="http://cokhithudo.vn/">
+<body data-base="<?php bloginfo('url'); ?>">
 <div id="fb-root" class=" fb_reset">
 	<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
 		<div>
@@ -545,8 +545,8 @@
 <!--End of Tawk.to Script-->
 <div class="container">
 	<div class="row">
-		<div class="col-sm-0 col-md-0 col-lg-0 col-xl-3 logo"><a href="http://cokhithudo.vn/"><img
-					src="upload/files/LOGO COKHI(1).png"></a></div>
+		<div class="col-sm-0 col-md-0 col-lg-0 col-xl-3 logo"><a href="<?php bloginfo('url'); ?>"><img
+					src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>"></a></div>
 		<div class="col-0 col-sm-2"></div>
 		<div class="col-sm-12 col-md-12 col-lg-12 col-xl-7 top_menu">
 			<div class="row">
@@ -561,19 +561,19 @@
 				<div class="col-sm-8">
 					<div class="row">
 						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="http://cokhithudo.vn/gioi-thieu"><img
-									src="upload/images/danh-muc/about.png"></a>
+									src="<?php echo get_template_directory_uri() ?>/img/about.png"></a>
 							<p><a href="http://cokhithudo.vn/gioi-thieu">Giới thiệu</a>
 							</p></div>
 						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="http://cokhithudo.vn/du-an"><img
-									src="upload/images/danh-muc/duan.png"></a>
+									src="<?php echo get_template_directory_uri() ?>/img/duan.png"></a>
 							<p><a href="http://cokhithudo.vn/du-an">Dự án</a>
 							</p></div>
 						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="http://cokhithudo.vn/tin-tuc"><img
-									src="upload/images/danh-muc/news_cate.png"></a>
+									src="<?php echo get_template_directory_uri() ?>/img/news_cate.png"></a>
 							<p><a href="http://cokhithudo.vn/tin-tuc">Tin tức</a>
 							</p></div>
 						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="http://cokhithudo.vn/lien-he"><img
-									src="upload/images/danh-muc/contact.png"></a>
+									src="<?php echo get_template_directory_uri() ?>/img/contact.png"></a>
 							<p><a href="http://cokhithudo.vn/lien-he">Liên hệ</a>
 							</p></div>
 					</div>
