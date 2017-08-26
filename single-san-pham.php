@@ -31,7 +31,7 @@ while ( have_posts() ) : the_post();
 			<div class="col-sm-9 product">
 
 				<div class="row">
-					<div class="col-sm-6 slide_pro">
+					<div class="col-sm-12 slide_pro">
 						<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/slide/jssor.css">
 						<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/slide/magnific-popup.css">
 						<script src="<?php echo get_template_directory_uri() ?>/js/slide/jquery.magnific-popup.min.js"></script>
@@ -143,7 +143,7 @@ while ( have_posts() ) : the_post();
                 function ScaleSlider() {
                   var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
                   if (refSize) {
-                    refSize = Math.min(refSize, 380);
+                    refSize = Math.min(refSize, 780);
                     jssor_1_slider.$ScaleWidth(refSize);
                   }
                   else {
@@ -159,7 +159,8 @@ while ( have_posts() ) : the_post();
               });
 						</script>
 					</div>
-					<div class="col-sm-6 detail_pro">
+					<br />
+					<div class="col-sm-12 detail_pro">
 
 						<?php
 						echo get_post_meta( $post->ID, 'wpcf-mo-ta-san-pham', true );

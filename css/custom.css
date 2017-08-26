@@ -221,7 +221,7 @@ a:hover {
 
 .menuvertical ul li a:hover {
     color: #fff;
-    background: #3da2d8;
+    background: #f58634;
 }
 
 .menu ul li:hover ul {
@@ -895,15 +895,15 @@ a:hover {
 }
 
 .footer_1 {
-    background: #005690;
-    color: #fff;
+    background: #e6e2d5;
+    color: #000000;
     border-top: 2px solid #f58634;
 }
 
 .footer_2 {
-    background: #005690;
-    color: #fff;
-    border-top: 1px solid #0066aa;
+    background: #e6e2d5;
+    color: #000000;
+    border-top: 1px solid #e6e2d5;
 }
 
 .address_contact {
@@ -919,8 +919,8 @@ a:hover {
 }
 
 .copy_right {
-    background: #004e82;
-    color: #fff;
+    background: #e6e2d5;
+    color: #000000;
     font-size: 14px;
     padding: 5px;
 }
@@ -947,7 +947,7 @@ a:hover {
 }
 
 .list_menu_bottom p a {
-    color: #fff;
+    color: #000000;
     font-size: 13px;
 }
 
@@ -1003,11 +1003,10 @@ a:hover {
 }
 
 .title_menu {
-    background: #0e76bc;
-    color: #fff;
+    color: #000000;
     padding: 5px;
     border-radius: 5px 5px 0px 0px;
-    background: #1a80b6;
+    background:#e6e2d5;
     border-bottom: 2px solid #f58634;
     text-transform: uppercase;
 }
@@ -1180,8 +1179,8 @@ a:hover {
 }
 
 .title_pro {
-    background: #1a80b6;
-    color: #fff;
+    background: #e6e2d5;
+    color: #000000;
     border-bottom: 2px solid #f58634;
     padding: 5px;
     border-radius: 5px 5px 0px 0px;
@@ -1291,6 +1290,10 @@ a:hover {
     font-size: 22px;
     border-radius: 3px;
     color: #424242;
+}
+
+.detail_pro {
+    margin-top: 20px;
 }
 
 .detail_pro p {

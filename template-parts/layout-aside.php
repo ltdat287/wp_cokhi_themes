@@ -1,5 +1,5 @@
 <div class="col-sm-3">
-	<div class="title_menu"><img src="http://cokhithudo.vn/skin/frontend/img/cate_product.png"> Danh mục sản phẩm
+	<div class="title_menu"><img src="<?php echo get_template_directory_uri() ?>/img/cate_product.png"> Danh mục sản phẩm
 	</div>
 	<div class="menuvertical">
 		<ul>
@@ -54,7 +54,7 @@
 
 	<?php if ( $the_query->have_posts() ) : ?>
 
-		<div class="title_menu"><img src="http://cokhithudo.vn/skin/frontend/img/news_new_right.png"> Tin tức mới</div>
+		<div class="title_menu"><img src="<?php echo get_template_directory_uri() ?>/img/news_new_right.png"> Tin tức mới</div>
 
 		<div class="list_new">
 
