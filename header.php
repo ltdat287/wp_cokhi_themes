@@ -560,21 +560,21 @@
 				</div>
 				<div class="col-sm-8">
 					<div class="row">
-						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="http://cokhithudo.vn/gioi-thieu"><img
+						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="<?php bloginfo('url'); ?>/gioi-thieu"><img
 									src="<?php echo get_template_directory_uri() ?>/img/about.png"></a>
-							<p><a href="http://cokhithudo.vn/gioi-thieu">Giới thiệu</a>
+							<p><a href="<?php bloginfo('url'); ?>/gioi-thieu">Giới thiệu</a>
 							</p></div>
-						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="http://cokhithudo.vn/du-an"><img
+						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="<?php bloginfo('url'); ?>/du-an"><img
 									src="<?php echo get_template_directory_uri() ?>/img/duan.png"></a>
-							<p><a href="http://cokhithudo.vn/du-an">Dự án</a>
+							<p><a href="<?php bloginfo('url'); ?>/du-an">Dự án</a>
 							</p></div>
-						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="http://cokhithudo.vn/tin-tuc"><img
+						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="<?php bloginfo('url'); ?>/tin-tuc"><img
 									src="<?php echo get_template_directory_uri() ?>/img/news_cate.png"></a>
-							<p><a href="http://cokhithudo.vn/tin-tuc">Tin tức</a>
+							<p><a href="<?php bloginfo('url'); ?>/tin-tuc">Tin tức</a>
 							</p></div>
-						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="http://cokhithudo.vn/lien-he"><img
+						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="<?php bloginfo('url'); ?>/lien-he"><img
 									src="<?php echo get_template_directory_uri() ?>/img/contact.png"></a>
-							<p><a href="http://cokhithudo.vn/lien-he">Liên hệ</a>
+							<p><a href="<?php bloginfo('url'); ?>/lien-he">Liên hệ</a>
 							</p></div>
 					</div>
 				</div>
@@ -613,24 +613,6 @@
 						);
 						?>
 					</div>
-
-					<div class="search">
-						<div id="box-search" class="td-drop-down-search td-drop-down-search-open"
-						     aria-labelledby="td-header-search-button">
-							<form method="get" class="td-search-form" action="http://cokhithudo.vn/tim-kiem">
-								<div role="search" class="td-head-form-search-wrap">
-									<input id="td-header-search" value="" name="keyword" autocomplete="off" type="text"
-									       placeholder="Tìm kiếm..">
-								</div>
-							</form>
-							<div id="td-aj-search"></div>
-						</div>
-						<i id="search-btn" class="fa fa-search" aria-hidden="true"></i></div>
-					<!--                    <div class="search2">-->
-					<!--                    <form action="--><!--tim-kiem" method="get">-->
-					<!--                        <input type="text" id="search" name="keyword" placeholder="Tìm kiếm...">-->
-					<!--                        <button type="submit"><i class="fa fa-search"></i></button>-->
-					<!--                    </form></div>-->
 
 				</div>
 			</div>
