@@ -23,7 +23,7 @@ class Main_Menu_Walker extends WP_Bootstrap_Navwalker {
 	 */
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		if ( empty( $output ) ) {
-			$output .= '<li class="home-mobile"><a class="" href="http://cokhithudo.vn/"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
+			$output .= '<li class="home-mobile"><a class="" href="' . get_home_url() . '"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
 		}
 
 		parent::start_el( $output, $item, $depth, $args );
@@ -227,5 +227,10 @@ add_image_size( 'image-blog-126-84', 126, 84, true );
  * Add new image size for listing product
  */
 add_image_size( 'image-product-326-245', 326, 245, true );
+
+/**
+ * Add new image size for slice homepage
+ */
+add_image_size( 'image-product-1070-400', 1070, 400, true );
 
 ?>

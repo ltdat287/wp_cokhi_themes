@@ -8,19 +8,19 @@ if ( count( $custom_terms ) ) :
 		<section class="slide">
 			<div id="owl-one-slide">
 				<?php
-					foreach ( $custom_terms as $custom_term ) {
-						wp_reset_query();
-						$image_slice = function_exists('z_taxonomy_image_url') ? z_taxonomy_image_url($custom_term->term_id, array( 1070, 400 ), TRUE) : 'http://placehold.it/1070x400';
-						?>
-						<div class="item">
-							<a href="<?php echo get_term_link( $custom_term ); ?>"><img src="<?php echo $image_slice; ?>" alt="<?php echo $custom_term->name; ?>"></a>
-							<p><a href="<?php echo get_term_link( $custom_term ); ?>"><?php echo $custom_term->name; ?></a>
-								<br>
-								<i></i></p>
-						</div>
-						<?php
-					}
+				foreach ( $custom_terms as $custom_term ) {
+					wp_reset_query();
+					$image_slice = function_exists('z_taxonomy_image_url') ? z_taxonomy_image_url($custom_term->term_id, array( 1070, 400 ), TRUE) : 'http://placehold.it/1070x400';
 					?>
+					<div class="item">
+						<a href="<?php echo get_term_link( $custom_term ); ?>"><img src="<?php echo $image_slice; ?>" alt="<?php echo $custom_term->name; ?>"></a>
+						<p><a href="<?php echo get_term_link( $custom_term ); ?>"><?php echo $custom_term->name; ?></a>
+							<br>
+							<i></i></p>
+					</div>
+					<?php
+				}
+				?>
 			</div>
 
 			<script>

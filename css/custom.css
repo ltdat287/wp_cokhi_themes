@@ -742,7 +742,7 @@ a:hover {
 }
 
 .pro_home .cate_one {
-    background-color: #0e76bc;
+    background-color: #ffffff;
     border-color: transparent;
     border-radius: 5px 5px 0px 0px;
 }
@@ -758,15 +758,16 @@ a:hover {
 }
 
 .pro_home .cate_one .nav-link, .nav-tabs .nav-link.active {
-    background-color: #0e76bc !important;
+    background-color: #ffffff !important;
     border-color: transparent;
     border-radius: 5px 5px 0px 0px;
     color: #fff !important;
 }
 
 .pro_home .cate_one .nav-link, .nav-tabs .nav-link.active a {
-    color: #fff !important;
+    color: #000000 !important;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .pro_home .nav-tabs .nav-item {
@@ -1223,7 +1224,7 @@ a:hover {
 
 .list_pro .pro img {
     width: 100%;
-    height: auto;
+    height: 162px;
 }
 
 .list_cate .cate_product img {
@@ -1233,7 +1234,7 @@ a:hover {
 
 .tab-content img {
     width: 100%;
-    height: auto;
+    height: 162px;
 }
 
 .list_pro p {

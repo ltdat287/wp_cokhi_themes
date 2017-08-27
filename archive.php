@@ -19,7 +19,7 @@
 			?>
 
 			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9">
-				<div class="title_pro"><img src="<?php echo get_template_directory_uri() ?>/img/product.png"> <?php echo mb_strtoupper($obj->labels->name, 'UTF-8') ?>
+				<div class="title_pro"><img src="<?php echo get_template_directory_uri() ?>/img/mini-logo.png"> <?php echo mb_strtoupper($obj->labels->name, 'UTF-8') ?>
 				</div>
 				<div class="list_pro">
 					<div class="row">
