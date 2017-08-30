@@ -5,8 +5,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" href="upload/files/favicon.png" type="image/x-icon">
-	<title>Cơ Khí Thủ Đô</title>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/img/mini-logo.png'; ?>" type="image/x-icon">
+	<title><?php wp_title('', true,''); ?></title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="robots" content="index,follow">
@@ -18,7 +18,7 @@
 	<meta property="og:image:type" content="image/png/jpg/gif">
 	<meta property="og:image:width" content="300">
 	<meta property="og:image:height" content="300">
-	<meta property="og:site_name" content="CoKhiThuDo">
+	<meta property="og:site_name" content="<?php wp_title('', true,''); ?>">
 	<meta name="revisit-after" content="1 days">
 	<meta name="rating" content="general">
 	<!--    <meta property="fb:app_id" content="--><!--"/>-->
@@ -27,9 +27,6 @@
 
 	<base href="<?php bloginfo('url'); ?>">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-
-	<script async="" src="https://embed.tawk.to/596ef3331dc79b329518f130/default" charset="UTF-8"
-	        crossorigin="*"></script>
 	<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 	<script id="facebook-jssdk" src="//connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v2.8&amp;appId=#"></script>
 	<style type="text/css">.fb_hidden {
@@ -531,18 +528,6 @@
   ga('send', 'pageview');
 
 </script>    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/596ef3331dc79b329518f130/default';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  })();
-</script>
-<!--End of Tawk.to Script-->
 <div class="container">
 	<div class="row">
 		<div class="col-sm-0 col-md-0 col-lg-0 col-xl-3 logo"><a href="<?php bloginfo('url'); ?>"><img
@@ -552,7 +537,7 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="row row-25 call-top">
-						<div class="col-2 col-sm-2 call"><img src="http://cokhithudo.vn/skin/frontend/img/call.png" alt=""></div>
+						<div class="col-2 col-sm-2 call"><img src="<?php echo get_template_directory_uri() . '/img/call.png'?>" alt=""></div>
 						<div class="col-10 col-sm-10 text-left">
 							<b><a href="tel:024 2240 8989">024 2240 8989</a></b>
 							<p>Tư vấn khách hàng</p></div>

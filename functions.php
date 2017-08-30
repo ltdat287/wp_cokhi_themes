@@ -73,6 +73,7 @@ function dlt_themes_js_setup() {
 	global $wp_scripts;
 
 	wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/bower_components/jQuery/dist/jquery.js' );
+	wp_enqueue_script( 'tether_js', 'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js' );
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js' );
 	wp_enqueue_script( 'owl_carousel_js', get_template_directory_uri() . '/bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js' );
 	wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/customs.js' );
@@ -108,8 +109,11 @@ function lst_products( $atts ) {
 	$content = '';
 
 	foreach ( $posts as $post ) {
-		$img_src = ( get_the_post_thumbnail_url( $post, array( 326, 245 ) ) ) ? get_the_post_thumbnail_url( $post, array( 326, 245 ) ) : 'http://placehold.it/326x245';
-		$content .= '<div class="col-6 col-sm-4 col-lg-4 padding-10"><a href="'. get_permalink( $post->ID ) .'"><img src="'. $img_src .'" alt="' . $post->post_title . '"></a><p><a href="'. get_permalink( $post->ID ) .'">' . $post->post_title . '</a></p></div>';
+		$img_src = ( get_the_post_thumbnail_url( $post, array(
+			326,
+			245
+		) ) ) ? get_the_post_thumbnail_url( $post, array( 326, 245 ) ) : 'http://placehold.it/326x245';
+		$content .= '<div class="col-6 col-sm-4 col-lg-4 padding-10"><a href="' . get_permalink( $post->ID ) . '"><img src="' . $img_src . '" alt="' . $post->post_title . '"></a><p><a href="' . get_permalink( $post->ID ) . '">' . $post->post_title . '</a></p></div>';
 	}
 
 	return $content;

@@ -168,98 +168,25 @@ while ( have_posts() ) : the_post();
 
 						<div class="contact_pro">
 							<b>024 2240 8989</b>
+							
 							<div class="pro_contact">
-								<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Liên hệ tư vấn
-								</button>
-							</div>
-							<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-							     aria-labelledby="myLargeModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-lg">
-									<div class="modal-content">
-										<p>
-											THÔNG TIN KHÁCH HÀNG
-										</p>
-										<link href="http://cokhithudo.vn/skin/frontend/css/theme-default.css" rel="stylesheet">
-										<script type="text/javascript"
-										        src="http://cokhithudo.vn/skin/frontend/js/jquery.form-validator.min.js"></script>
-										<div class="forn-contact">
-											<form id="form-contact-product" action="http://cokhithudo.vn/contact-product"
-											      class="has-validation-callback">
-												<div class="form-group">
-													<div class="row">
-														<div class="col-sm-3 text-right">
-															Họ tên <font style="color: #ff0000">(*)</font>
-														</div>
-														<div class="col-sm-9">
-															<input type="text" class="form-control" name="name" placeholder=""
-															       data-validation="required">
-														</div>
-													</div>
-												</div>
-												<div class="form-group">
-													<div class="row">
-														<div class="col-sm-3 text-right">
-															Điện thoại <font style="color: #ff0000">(*)</font>
-														</div>
-														<div class="col-sm-9">
-															<input type="text" class="form-control" name="phone" placeholder=""
-															       data-validation="required,length,number" data-validation-allowing="float"
-															       data-validation-length="10-20">
-														</div>
-													</div>
-												</div>
-												<div class="form-group">
-													<div class="row">
-														<div class="col-sm-3 text-right">
-															Địa chỉ Email <font style="color: #ff0000">(*)</font>
-														</div>
-														<div class="col-sm-9">
-															<input type="text" class="form-control" name="email" placeholder=""
-															       data-validation="required,email">
-														</div>
-													</div>
-												</div>
-												<div class="form-group">
-													<div class="row">
-														<div class="col-sm-3 text-right">
-															Ghi chú
-														</div>
-														<div class="col-sm-9">
-															<textarea class="form-control" rows="3" name="content" placeholder=""
-															          data-validation="required"></textarea>
-														</div>
-													</div>
-													<input type="hidden" name="id_sp" value="134">
-													<button type="submit" class="btn btn-danger btn-send" style="cursor: pointer">Gửi đi</button>
-													<script>
-                            $(document).ready(function () {
-                              $.validate({
-                                form: '#form-contact-product',
-                                lang: 'vi',
-                                modules: 'security',
-                                onSuccess: function (form) {
-                                  var base = $('body').attr('data-base');
-                                  $.ajax({
-                                    type: "POST",
-//                            cache: false,
-                                    url: base + 'contact-product',
-                                    data: $('#form-contact-product').serialize(),
-                                    success: function (data, status) {
-                                      $('#form-contact-product').html(data);
-//                                    alert(base);
-                                    }
-                                  });
-                                  return false; // Will stop the submission of the form
-                                },
-                              });
-                            })
-													</script>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
+	<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Liên hệ tư vấn </button>
+</div>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<p>
+				 THÔNG TIN KHÁCH HÀNG
+			</p>
+			<div class="forn-contact">
+				
+				<?php do_shortcode( '[contact-form-7 id="56" title="contact-form-single-sanpham"] product-name=145' ); ?>
+				
+			</div>
+		</div>
+	</div>
+</div>
+							
 						</div>
 					</div>
 					<div class="tab_product col-sm-12">

@@ -761,7 +761,7 @@ a:hover {
     background-color: #ffffff !important;
     border-color: transparent;
     border-radius: 5px 5px 0px 0px;
-    color: #fff !important;
+    color: #000000 !important;
 }
 
 .pro_home .cate_one .nav-link, .nav-tabs .nav-link.active a {
