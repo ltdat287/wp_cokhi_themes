@@ -33,7 +33,7 @@
 					<div class="row">
 						<div class="col-2 col-sm-2"><img src="<?php echo get_template_directory_uri() . '/images/about/about_4.png' ?>" alt=""></div>
 						<div class="col-10 col-sm-10"><b>Liên hệ</b>
-							<p>0964 13 13 99</p></div>
+							<p><?php echo get_option( 'lst_phone' ); ?></p></div>
 					</div>
 				</div>
 			</div>
