@@ -155,10 +155,10 @@ if ( count( $recent_posts ) ) {
 			<?php
 			foreach ( $recent_posts as $recent_post ) :
 				$url = get_permalink( $recent_post );
-				$img_new = ( get_the_post_thumbnail_url( $recent_post, array(
+				$img_new = ( get_the_post_thumbnail_url( $recent_post['ID'], array(
 					326,
 					245
-				) ) ) ? get_the_post_thumbnail_url( $recent_post, array( 326, 245 ) ) : 'http://placehold.it/326x245';
+				) ) ) ? get_the_post_thumbnail_url( $recent_post['ID'], array( 326, 245 ) ) : 'http://placehold.it/326x245';
 				?>
 				<div class="col-sm-4 col-lg-3">
 					<div class="news_home">

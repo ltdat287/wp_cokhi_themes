@@ -159,7 +159,7 @@ while ( have_posts() ) : the_post();
               });
 						</script>
 					</div>
-					<br />
+					<br/>
 					<div class="col-sm-12 detail_pro">
 
 						<?php
@@ -167,26 +167,11 @@ while ( have_posts() ) : the_post();
 						?>
 
 						<div class="contact_pro">
-							<b>024 2240 8989</b>
-							
 							<div class="pro_contact">
-	<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Liên hệ tư vấn </button>
-</div>
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<p>
-				 THÔNG TIN KHÁCH HÀNG
-			</p>
-			<div class="forn-contact">
-				
-				<?php do_shortcode( '[contact-form-7 id="56" title="contact-form-single-sanpham"] product-name=145' ); ?>
-				
-			</div>
-		</div>
-	</div>
-</div>
-							
+								<a href="tel:<?php echo get_option( 'lst_phone' ); ?>"
+								   class="btn btn-primary">Liên hệ tư vấn </a>
+							</div>
+
 						</div>
 					</div>
 					<div class="tab_product col-sm-12">
@@ -214,17 +199,7 @@ while ( have_posts() ) : the_post();
 								<div class="tab-pane" id="tab_2" role="tabpanel">
 								</div>
 								<div class="tab-pane" id="tab_3" role="tabpanel">
-									<div class="fb-comments fb_iframe_widget"
-									     data-href="http://cokhithudo.vn/sua-chua-cai-tao-cac-cong-trinh-co-khi" data-colorscheme="light"
-									     data-width="770" data-numposts="10" data-order-by="reverse_time" fb-xfbml-state="rendered">
-							<span style="height: 759px; width: 770px;">
-							<iframe id="f28875ae954d328" name="f2e24da0a6e3054" scrolling="no" title="Facebook Social Plugin"
-							        class="fb_ltr"
-							        src="https://www.facebook.com/plugins/comments.php?api_key=&amp;channel_url=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FXBwzv5Yrm_1.js%3Fversion%3D42%23cb%3Df2a92e7f6335cb4%26domain%3Dcokhithudo.vn%26origin%3Dhttp%253A%252F%252Fcokhithudo.vn%252Ff23b522d75d55b4%26relation%3Dparent.parent&amp;colorscheme=light&amp;href=http%3A%2F%2Fcokhithudo.vn%2Fsua-chua-cai-tao-cac-cong-trinh-co-khi&amp;locale=vi_VN&amp;numposts=10&amp;order_by=reverse_time&amp;sdk=joey&amp;skin=light&amp;version=v2.8&amp;width=770"
-							        style="border: none; overflow: hidden; height: 759px; width: 770px;">
-							</iframe>
-							</span>
-									</div>
+
 								</div>
 							</div>
 							<script>
@@ -242,7 +217,7 @@ while ( have_posts() ) : the_post();
           })</script>
 				<br>
 				<div class="title_pro">
-					<img src="http://cokhithudo.vn/skin/frontend/img/splq.png"> SẢN PHẨM LIÊN QUAN
+					<img src="<?php echo get_template_directory_uri() ?>/img/mini-logo.png"> SẢN PHẨM LIÊN QUAN
 				</div>
 				<div class="pro_more">
 					<div class="row row-10">

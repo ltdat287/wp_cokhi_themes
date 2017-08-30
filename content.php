@@ -6,7 +6,7 @@
 
 
 			<div class="art_more">
-				<b><img src="http://cokhithudo.vn/skin/frontend/img/icon_more_art.png" alt="">Bài viết liên quan</b>
+				<b><img src="<?php echo get_template_directory_uri() ?>/img/mini-logo.png" alt="">Bài viết liên quan</b>
 
 				<?php
 				$cat = get_the_category();

@@ -486,48 +486,6 @@
 </head>
 
 <body data-base="<?php bloginfo('url'); ?>">
-<div id="fb-root" class=" fb_reset">
-	<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
-		<div>
-			<iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
-			        id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1"
-			        src="http://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f1eb7b6d8d1f888&amp;origin=http%3A%2F%2Fcokhithudo.vn"
-			        style="border: none;"></iframe>
-			<iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
-			        id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1"
-			        src="https://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f1eb7b6d8d1f888&amp;origin=http%3A%2F%2Fcokhithudo.vn"
-			        style="border: none;"></iframe>
-		</div>
-	</div>
-	<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
-		<div></div>
-	</div>
-</div>
-<script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=#";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-102048832-1', 'auto');
-  ga('send', 'pageview');
-
-</script>    <!--Start of Tawk.to Script-->
 <div class="container">
 	<div class="row">
 		<div class="col-sm-0 col-md-0 col-lg-0 col-xl-3 logo"><a href="<?php bloginfo('url'); ?>"><img
@@ -539,7 +497,7 @@
 					<div class="row row-25 call-top">
 						<div class="col-2 col-sm-2 call"><img src="<?php echo get_template_directory_uri() . '/img/call.png'?>" alt=""></div>
 						<div class="col-10 col-sm-10 text-left">
-							<b><a href="tel:024 2240 8989">024 2240 8989</a></b>
+							<b><a href="tel:<?php echo get_option( 'lst_phone' ); ?>"><?php echo get_option( 'lst_phone' ); ?></a></b>
 							<p>Tư vấn khách hàng</p></div>
 					</div>
 				</div>
@@ -551,7 +509,7 @@
 							</p></div>
 						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="<?php bloginfo('url'); ?>/du-an"><img
 									src="<?php echo get_template_directory_uri() ?>/img/duan.png"></a>
-							<p><a href="<?php bloginfo('url'); ?>/du-an">Dự án</a>
+							<p><a href="<?php bloginfo('url'); ?>/san-pham">Dự án</a>
 							</p></div>
 						<div class="col-3 col-sm-3 text-center cate_menutop "><a href="<?php bloginfo('url'); ?>/tin-tuc"><img
 									src="<?php echo get_template_directory_uri() ?>/img/news_cate.png"></a>

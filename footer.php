@@ -47,7 +47,7 @@
 
 				<div>Địa chỉ: 323 Lương Thế Vinh, Trung Văn, Nam Từ Liêm, Hà Nội</div>
 
-				<div><strong>Điện thoại: 024 2240 8989 - Hotline: 0964 13 13 99 / 0943 23 23 66</strong></div>
+				<div><strong>Điện thoại: <?php echo get_option( 'lst_phone' ); ?></strong></div>
 
 				<div>Email: admin@bienhieuled.vn&nbsp;| Website: www.bienhieuled.vn</div>
 				<div class="bottom_mxh">
@@ -68,7 +68,7 @@
 				Copyright ©2017 Bienhieuled.vn. All Rights Reserved - Design by @datlt</div>
 			<div class="col-sm-2">
 				<div class="phone-fixed"><img src="<?php echo get_template_directory_uri() . '/img/phone_fixed.png'; ?>" alt=""> <b>Hotline:</b>
-					<a href="tel:024 2240 8989">024 2240 8989</a></div></div>
+					<a href="tel:<?php echo get_option( 'lst_phone' ); ?>"><?php echo get_option( 'lst_phone' ); ?></a></div></div>
 		</div>
 	</div>
 </div>
