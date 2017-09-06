@@ -1,7 +1,10 @@
 <?php
 get_header();
 
-$custom_terms = get_terms( 'danh-muc-san-pham' );
+$custom_terms = get_terms( 'danh-muc-san-pham', array( 
+				'orderby' => 'description',
+				'order' => 'ASC'
+ ) );
 if ( count( $custom_terms ) ) :
 	?>
 	<div class="container">
@@ -154,7 +157,7 @@ if ( count( $recent_posts ) ) {
 		<div class="row">
 			<?php
 			foreach ( $recent_posts as $recent_post ) :
-				$url = get_permalink( $recent_post );
+				$url = get_permalink( $recent_post['ID'] );
 				$img_new = ( get_the_post_thumbnail_url( $recent_post['ID'], array(
 					326,
 					245

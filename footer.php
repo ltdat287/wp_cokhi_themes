@@ -43,11 +43,11 @@
 <div class="footer_2">
 	<div class="container">
 		<div class="address_contact">
-			<div class="text-center"><div><strong>CÔNG TY CỔ PHẦN IKD VIỆT NAM</strong></div>
+			<div class="text-center"><div><strong>CÔNG TY QUẢNG CÁO IKD VIỆT NAM</strong></div>
 
-				<div>Địa chỉ: 323 Lương Thế Vinh, Trung Văn, Nam Từ Liêm, Hà Nội</div>
+				<div>Địa chỉ: Số 32, phố Đốc Ngữ, Phường Vĩnh Phúc, Quận Ba Đình, Thành phố Hà Nội.</div>
 
-				<div><strong>Điện thoại: <?php echo get_option( 'lst_phone' ); ?></strong></div>
+				<div><strong>Điện thoại: 02422 315 669 - <?php echo get_option( 'lst_phone' ); ?></strong></div>
 
 				<div>Email: admin@bienhieuled.vn&nbsp;| Website: www.bienhieuled.vn</div>
 				<div class="bottom_mxh">
