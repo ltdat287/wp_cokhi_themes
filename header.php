@@ -5,6 +5,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="fb:app_id" content="1194111090724590" />
+    <meta property="fb:admins" content="100000532013841"/>
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/img/mini-logo.png'; ?>" type="image/x-icon">
 	<?php wp_head(); ?>
 	<!-- start Mixpanel -->
@@ -14,6 +16,14 @@
 	mixpanel.init("bc868cf0b8c9f421def9eb4d8a9dfdae");</script>
 	<!-- end Mixpanel -->
 </head>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12&appId=1194111090724590&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
 <body data-base="<?php bloginfo('url'); ?>">
 <div class="container">

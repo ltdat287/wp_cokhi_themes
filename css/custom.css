@@ -1482,3 +1482,8 @@ a:hover {
 #jssor_1{
     width: 100% !important;
 }
+
+.badge {
+    background-color: green;
+    border-radius: 10px;
+}
