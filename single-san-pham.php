@@ -186,7 +186,7 @@ while (have_posts()) : the_post();
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#comment" role="tab">
                                         ĐÁNH GIÁ NHẬN XÉT
-                                        <span class="badge fb-comments-count" xid="<?php the_ID(); ?>">0</span>
+                                        <span class="badge fb-comments-count" data-href="<?php echo get_the_permalink() . '/#comment'; ?>" xid="<?php the_ID(); ?>">0</span>
                                     </a>
                                 </li>
                             </ul>
@@ -200,7 +200,7 @@ while (have_posts()) : the_post();
 
                                 </div>
                                 <div class="tab-pane" id="comment" role="tabpanel">
-                                    <div class="fb-comments" xid="<?php the_ID(); ?>" data-numposts="10" width="100%"
+                                    <div class="fb-comments" data-href="<?php echo get_the_permalink() . '/#comment'; ?>" xid="<?php the_ID(); ?>" data-numposts="10" width="100%"
                                          data-colorscheme="light" data-version="v2.3"></div>
                                 </div>
                             </div>

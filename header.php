@@ -6,7 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="fb:app_id" content="1194111090724590" />
-    <meta property="fb:admins" content="100000532013841"/>
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/img/mini-logo.png'; ?>" type="image/x-icon">
 	<?php wp_head(); ?>
 	<!-- start Mixpanel -->
